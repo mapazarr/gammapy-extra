@@ -34,6 +34,4 @@ dependencies:
   - iminuit
 
   - pip:
-    - vdom
-    - jupyterlab_launcher
     - git+https://github.com/gammapy/gammapy.git#egg=gammapy
