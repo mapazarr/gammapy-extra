@@ -35,9 +35,13 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 
-# start Jupyter server in notebooks dir
+# start JupyterLab server in notebooks dir
 USER ${NB_USER}
 WORKDIR ${HOME}/notebooks
 
 # env vars used in notebooks
 ENV GAMMAPY_EXTRA /home/${NB_USER}
+
+# launch JupyterLab
+jupyter lab clean
+jupyter lab
