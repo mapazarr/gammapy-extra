@@ -6,9 +6,9 @@ MAINTAINER Gammapy developers <gammapy@googlegroups.com>
 
 # compilers
 RUN apt-get update && apt-get install -y build-essential
+RUN pip install --upgrade pip 
 
 # install good version of notebook for Binder
-# RUN pip install --upgrade pip 
 # RUN pip install --no-cache-dir notebook==5.*
 
 # install dependencies - including the dev version of Gammapy
@@ -41,7 +41,3 @@ WORKDIR ${HOME}/notebooks
 
 # env vars used in notebooks
 ENV GAMMAPY_EXTRA /home/${NB_USER}
-
-# launch JupyterLab
-RUN jupyter lab clean
-RUN jupyter lab
