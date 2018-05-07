@@ -43,5 +43,5 @@ WORKDIR ${HOME}/notebooks
 ENV GAMMAPY_EXTRA /home/${NB_USER}
 
 # launch JupyterLab
-jupyter lab clean
-jupyter lab
+RUN jupyter lab clean
+RUN jupyter lab
