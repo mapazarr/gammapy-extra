@@ -8,7 +8,8 @@ MAINTAINER Gammapy developers <gammapy@googlegroups.com>
 RUN apt-get update && apt-get install -y build-essential
 
 # install good version of notebook for Binder
-RUN pip install --no-cache-dir notebook==5.*
+RUN pip install --upgrade pip 
+# RUN pip install --no-cache-dir notebook==5.*
 
 # install dependencies - including the dev version of Gammapy
 COPY environment.yml binder.py tmp/
